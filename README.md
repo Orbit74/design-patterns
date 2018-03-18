@@ -1,1 +1,3 @@
-Playing with patterns
+# design-patterns
+
+Playing with design patterns
