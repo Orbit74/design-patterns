@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF65C768-D4F0-4932-8548-E409DB326816}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestingApp</RootNamespace>
+    <AssemblyName>TestingApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DecoratorPattern\Beverage.cs" />
+    <Compile Include="DecoratorPattern\CondimentDecorator.cs" />
+    <Compile Include="DecoratorPattern\Decaf.cs" />
+    <Compile Include="DecoratorPattern\DarkRoast.cs" />
+    <Compile Include="DecoratorPattern\HouseBlend.cs" />
+    <Compile Include="DecoratorPattern\Espresso.cs" />
+    <Compile Include="DecoratorPattern\Whip.cs" />
+    <Compile Include="DecoratorPattern\SteamedMilk.cs" />
+    <Compile Include="DecoratorPattern\Soy.cs" />
+    <Compile Include="DecoratorPattern\Mocha.cs" />
+    <Compile Include="FactoryPattern\ItalianCheesePizza.cs" />
+    <Compile Include="FactoryPattern\ItalianMeatFeastPizza.cs" />
+    <Compile Include="FactoryPattern\ItalianPepperoniPizza.cs" />
+    <Compile Include="FactoryPattern\NewYorkCheesePizza.cs" />
+    <Compile Include="FactoryPattern\NewYorkMeatFeastPizza.cs" />
+    <Compile Include="FactoryPattern\NewYorkPepperoniPizza.cs" />
+    <Compile Include="FactoryPattern\ItalianPizzaStore.cs" />
+    <Compile Include="FactoryPattern\NewYorkPizzaStore.cs" />
+    <Compile Include="FactoryPattern\Pizza.cs" />
+    <Compile Include="FactoryPattern\PizzaStore.cs" />
+    <Compile Include="ObserverPattern\ForecastDisplay.cs" />
+    <Compile Include="ObserverPattern\HeatIndexDisplay.cs" />
+    <Compile Include="ObserverPattern\StatisticsDisplay.cs" />
+    <Compile Include="ObserverPattern\CurrentConditionsDisplay.cs" />
+    <Compile Include="ObserverPattern\IDisplayElement.cs" />
+    <Compile Include="ObserverPattern\IObserver.cs" />
+    <Compile Include="ObserverPattern\ISubject.cs" />
+    <Compile Include="ObserverPattern\WeatherData.cs" />
+    <Compile Include="StrategyPattern\Ducks\Duck.cs" />
+    <Compile Include="StrategyPattern\FlyBehaviour\FlyNoWay.cs" />
+    <Compile Include="StrategyPattern\FlyBehaviour\FlyRocketPowered.cs" />
+    <Compile Include="StrategyPattern\FlyBehaviour\FlyWithWings.cs" />
+    <Compile Include="StrategyPattern\FlyBehaviour\IFlyBehaviour.cs" />
+    <Compile Include="StrategyPattern\QuakBehaviour\IQuackBehaviour.cs" />
+    <Compile Include="StrategyPattern\Ducks\ModelDuck.cs" />
+    <Compile Include="StrategyPattern\Ducks\RubberDuck.cs" />
+    <Compile Include="StrategyPattern\Ducks\MalllardDuck.cs" />
+    <Compile Include="StrategyPattern\QuakBehaviour\MuteQuack.cs" />
+    <Compile Include="StrategyPattern\QuakBehaviour\Squeek.cs" />
+    <Compile Include="StrategyPattern\QuakBehaviour\QuackNoise.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
