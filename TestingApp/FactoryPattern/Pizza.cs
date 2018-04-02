@@ -14,6 +14,7 @@ namespace TestingApp.FactoryPattern
 		public Cheese Cheese { get; set; }
 		public Pepperoni Pepperoni { get; set; }
 		public Veggie[] Veggies { get; set; }
+		public Clam Clam { get; set; }
 
 		public string Name { get; set; }
 		public List<string> Toppings { get; set; } = new List<string>();

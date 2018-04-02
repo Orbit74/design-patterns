@@ -75,7 +75,7 @@ namespace TestingApp
 			Pizza italianPizza = italianPizzaStore.OrderPizza("cheese");
 			Console.WriteLine($"Andy ordered a {italianPizza.Name}");
 
-			Pizza newYorkPizza = newYorkPizzaStore.OrderPizza("cheese");
+			Pizza newYorkPizza = newYorkPizzaStore.OrderPizza("clam");
 			Console.WriteLine($"Dawn ordered a {newYorkPizza.Name}");
 
 			Console.ReadLine();
