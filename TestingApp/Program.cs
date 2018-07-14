@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestingApp.CommandPattern;
 using TestingApp.DecoratorPattern;
 using TestingApp.DuckApp;
 using TestingApp.FactoryPattern;
@@ -84,9 +85,35 @@ namespace TestingApp
 			//Console.WriteLine($"James ordered a {californian.Name}");
 
 			//Singleton Pattern
-			var singleton = Singleton.GetSingleton();
-			Console.WriteLine($"The status of the singleton is {singleton.Status}");
+			//var singleton = Singleton.GetSingleton();
+			//Console.WriteLine($"The status of the singleton is {singleton.Status}");
 
+			//Command Pattern
+			var remote = new RemoteControl();
+
+			var kitchenLight = new Light("Kitchen");
+			var kitchenLightOn = new LightOnCommand(kitchenLight);
+			var KitchenLightOff = new LightOffCommand(kitchenLight);
+			remote.SetCommand(kitchenLightOn, KitchenLightOff);
+
+			var landingLight = new Light("Landing");
+			var landingLightOn = new LightOnCommand(landingLight);
+			var landingLightOff = new LightOffCommand(landingLight);
+			remote.SetCommand(landingLightOn, landingLightOff);
+
+			var garageDoor = new GarageDoor();
+			var garageOpen = new GarageDoorOpenCommand(garageDoor);
+			var garageClosed = new GarageDoorClosedCommand(garageDoor);
+			remote.SetCommand(garageOpen, garageClosed);
+
+			Console.WriteLine(remote.ToString());
+
+			remote.OnClicked(0);
+			remote.OnClicked(1);
+			remote.OnClicked(2);
+			remote.OffClicked(0);
+			remote.OffClicked(1);
+			remote.OffClicked(2);
 
 			Console.ReadLine();
 

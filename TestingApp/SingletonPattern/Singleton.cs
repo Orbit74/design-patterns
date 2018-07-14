@@ -8,7 +8,7 @@ namespace TestingApp.SingletonPattern
 {
 	public class Singleton
 	{
-		public string Status { get; set; } = "Not Initilised";
+		public string Status { get; set; } 
 		private static Singleton _singletonInstance;
 
 		static Singleton() { }
@@ -17,7 +17,7 @@ namespace TestingApp.SingletonPattern
 		{
 			if (_singletonInstance == null)
 			{
-				_singletonInstance = new Singleton { Status = "Iniialised" };
+				_singletonInstance = new Singleton { Status = "Initialised" };
 			}
 
 			return _singletonInstance;

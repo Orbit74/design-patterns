@@ -42,6 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandPattern\GarageDoor.cs" />
+    <Compile Include="CommandPattern\GarageDoorClosedCommand.cs" />
+    <Compile Include="CommandPattern\ICommand.cs" />
+    <Compile Include="CommandPattern\Light.cs" />
+    <Compile Include="CommandPattern\GarageDoorOpenCommand.cs" />
+    <Compile Include="CommandPattern\LightOffCommand.cs" />
+    <Compile Include="CommandPattern\LightOnCommand.cs" />
+    <Compile Include="CommandPattern\RemoteControl.cs" />
     <Compile Include="DecoratorPattern\Beverage.cs" />
     <Compile Include="DecoratorPattern\CondimentDecorator.cs" />
     <Compile Include="DecoratorPattern\Decaf.cs" />
