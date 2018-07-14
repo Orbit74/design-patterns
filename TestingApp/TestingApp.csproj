@@ -52,6 +52,8 @@
     <Compile Include="DecoratorPattern\SteamedMilk.cs" />
     <Compile Include="DecoratorPattern\Soy.cs" />
     <Compile Include="DecoratorPattern\Mocha.cs" />
+    <Compile Include="FactoryPattern\CaliforniaPizzaStore.cs" />
+    <Compile Include="FactoryPattern\CaliforniaPizzaIngredientFactory.cs" />
     <Compile Include="FactoryPattern\ClamPizza.cs" />
     <Compile Include="FactoryPattern\CheesePizza.cs" />
     <Compile Include="FactoryPattern\Ingredients\BlackOlives.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="ObserverPattern\IObserver.cs" />
     <Compile Include="ObserverPattern\ISubject.cs" />
     <Compile Include="ObserverPattern\WeatherData.cs" />
+    <Compile Include="SingletonPattern\Singleton.cs" />
     <Compile Include="StrategyPattern\Ducks\Duck.cs" />
     <Compile Include="StrategyPattern\FlyBehaviour\FlyNoWay.cs" />
     <Compile Include="StrategyPattern\FlyBehaviour\FlyRocketPowered.cs" />
