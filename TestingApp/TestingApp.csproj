@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandPattern\CeilingFan.cs" />
+    <Compile Include="CommandPattern\CeilingFanMediumCommand.cs" />
+    <Compile Include="CommandPattern\CeilingFanOffCommand.cs" />
+    <Compile Include="CommandPattern\CeilingFanLowCommand .cs" />
+    <Compile Include="CommandPattern\CeilingFanHighCommand.cs" />
     <Compile Include="CommandPattern\GarageDoor.cs" />
     <Compile Include="CommandPattern\GarageDoorClosedCommand.cs" />
     <Compile Include="CommandPattern\ICommand.cs" />

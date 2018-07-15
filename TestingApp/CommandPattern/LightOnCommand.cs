@@ -19,5 +19,10 @@ namespace TestingApp.CommandPattern
 		{
 			_light.On();
 		}
+
+		public void Undo()
+		{
+			_light.Off();
+		}
 	}
 }

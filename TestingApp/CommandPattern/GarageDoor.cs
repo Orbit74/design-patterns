@@ -17,11 +17,5 @@ namespace TestingApp.CommandPattern
 		{
 			Console.WriteLine("Garage door is closed.");
 		}
-
-		public void LightOn()
-		{
-			Console.WriteLine("Garage light is on.");
-		}
-
 	}
 }

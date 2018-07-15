@@ -9,5 +9,6 @@ namespace TestingApp.CommandPattern
 	public interface ICommand
 	{
 		void Execute();
+		void Undo();
 	}
 }

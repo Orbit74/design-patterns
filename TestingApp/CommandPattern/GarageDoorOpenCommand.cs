@@ -19,5 +19,10 @@ namespace TestingApp.CommandPattern
 		{
 			_garageDoor.Up();
 		}
+
+		public void Undo()
+		{
+			_garageDoor.Down();
+		}
 	}
 }

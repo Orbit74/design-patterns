@@ -8,12 +8,13 @@ namespace TestingApp.CommandPattern
 {
 	public class RemoteControl
 	{
-		List<ICommand> _onCommands = new List<ICommand>();
-		List<ICommand> _offCommands = new List<ICommand>();
+		List<Action> _onCommands = new List<Action>();
+		List<Action> _offCommands = new List<Action>();
+		Action _undoCommand;
 
-		public RemoteControl() {	}
+		public RemoteControl() { }
 
-		public void SetCommand(ICommand onCommand, ICommand offCommand)
+		public void SetCommand(Action onCommand, Action offCommand)
 		{
 			_onCommands.Add(onCommand);
 			_offCommands.Add(offCommand);
@@ -21,12 +22,25 @@ namespace TestingApp.CommandPattern
 
 		public void OnClicked(int index)
 		{
-			_onCommands[index].Execute();
+			_onCommands[index]();
+			_undoCommand = _onCommands[index];
 		}
 
 		public void OffClicked(int index)
 		{
-			_offCommands[index].Execute();
+			_offCommands[index]();
+			_undoCommand = _offCommands[index];
+		}
+
+		public void UndoClicked()
+		{
+			_undoCommand();
+		}
+
+		public void Clear()
+		{
+			_onCommands = new List<Action>();
+			_offCommands = new List<Action>();
 		}
 
 		public override string ToString()

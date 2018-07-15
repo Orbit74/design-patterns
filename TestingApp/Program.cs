@@ -46,7 +46,7 @@ namespace TestingApp
 			//mallardDuck.PerformFly();
 
 			//Observer Pattern
-			WeatherData wd = new WeatherData();
+			//WeatherData wd = new WeatherData();
 
 			//CurrentConditionsDisplay ccDsiplay = new CurrentConditionsDisplay(wd);
 			//ForecastDisplay fcDisplay = new ForecastDisplay(wd);
@@ -91,29 +91,53 @@ namespace TestingApp
 			//Command Pattern
 			var remote = new RemoteControl();
 
-			var kitchenLight = new Light("Kitchen");
-			var kitchenLightOn = new LightOnCommand(kitchenLight);
-			var KitchenLightOff = new LightOffCommand(kitchenLight);
-			remote.SetCommand(kitchenLightOn, KitchenLightOff);
+			//var kitchenLight = new Light("Kitchen");
+			//var kitchenLightOn = new LightOnCommand(kitchenLight);
+			//var KitchenLightOff = new LightOffCommand(kitchenLight);
+			//remote.SetCommand(kitchenLightOn, KitchenLightOff);
 
-			var landingLight = new Light("Landing");
-			var landingLightOn = new LightOnCommand(landingLight);
-			var landingLightOff = new LightOffCommand(landingLight);
-			remote.SetCommand(landingLightOn, landingLightOff);
+			//var landingLight = new Light("Landing");
+			//var landingLightOn = new LightOnCommand(landingLight);
+			//var landingLightOff = new LightOffCommand(landingLight);
+			//remote.SetCommand(landingLightOn, landingLightOff);
 
-			var garageDoor = new GarageDoor();
-			var garageOpen = new GarageDoorOpenCommand(garageDoor);
-			var garageClosed = new GarageDoorClosedCommand(garageDoor);
-			remote.SetCommand(garageOpen, garageClosed);
+			//var garageDoor = new GarageDoor();
+			//var garageOpen = new GarageDoorOpenCommand(garageDoor);
+			//var garageClosed = new GarageDoorClosedCommand(garageDoor);
+			//remote.SetCommand(garageOpen, garageClosed);
+
+			//Console.WriteLine(remote.ToString());
+
+			//remote.OnClicked(0);
+			//remote.UndoClicked();
+			//remote.OnClicked(0);
+			//remote.OnClicked(1);
+			//remote.OnClicked(2);
+			//remote.UndoClicked();
+			//remote.OffClicked(0);
+			//remote.OffClicked(1);
+			//remote.OffClicked(2);
+			//remote.UndoClicked();
+
+			//remote.Clear();
+			Console.WriteLine(remote.ToString());
+
+			var ceilingFan = new CeilingFan("Living Room");
+
+			remote.SetCommand(() => ceilingFan.Low(), () => ceilingFan.Off());
+			remote.SetCommand(() => ceilingFan.Medium(), () => ceilingFan.Off());
+			remote.SetCommand(() => ceilingFan.High(), () => ceilingFan.Off());
 
 			Console.WriteLine(remote.ToString());
 
 			remote.OnClicked(0);
+			remote.OffClicked(0);
+			remote.UndoClicked();
 			remote.OnClicked(1);
 			remote.OnClicked(2);
-			remote.OffClicked(0);
+			remote.UndoClicked();
+			remote.OnClicked(1);
 			remote.OffClicked(1);
-			remote.OffClicked(2);
 
 			Console.ReadLine();
 
